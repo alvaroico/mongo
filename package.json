@@ -1,0 +1,21 @@
+{
+  "name": "mongo",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc --project .",
+    "start": "ts-node --transpile-only --ignore ./node_modules/ ./src/index.ts"
+  },
+  "author": "alvaroico",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^3.6.4",
+    "ts-node": "^9.1.1"
+  },
+  "devDependencies": {
+    "@types/mongodb": "^3.6.8",
+    "@types/node": "^14.14.31"
+  }
+}
