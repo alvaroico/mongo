@@ -1,8 +1,11 @@
 import { MongoClient } from "mongodb";
-import { rejects } from "node:assert";
-import { resolve } from "node:path";
+import { Retangulo } from "./class/usuario";
 
-let arrayObjeto = [{ a: 1 }, { a: 2 }, { a: 3 }];
+const retangulo = new Retangulo();
+retangulo.altura = 1;
+retangulo.largura = 2;
+const retanguloArra = new Array();
+retanguloArra.push(retangulo);
 
 const job = async () => {
   let p: Promise<Object> = new Promise((resolve, rejects) => {
@@ -14,7 +17,7 @@ const job = async () => {
           client
             .db("myproject")
             .collection("documents")
-            .insertMany(arrayObjeto)
+            .insertMany(retanguloArra)
             .then((result) => {
               resolve(result);
             })
